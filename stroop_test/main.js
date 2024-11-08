@@ -30,9 +30,9 @@ class StroopTestScene extends Phaser.Scene {
         let displayColor = Phaser.Utils.Array.GetRandom(this.colors);  // Color in which the word will be displayed
 
         // Display the word in a random color
-        this.wordText = this.add.text(400, 150, this.correctColor, { fontSize: '48px', color: '#ffffff' })
+        this.wordText = this.add.text(400, 150, displayColor, { fontSize: '48px', color: '#ffffff' })
             .setOrigin(0.5)
-            .setTint(this.hexColors[displayColor]);
+            .setTint(this.hexColors[this.correctColor]);
 
         // Generate answer squares with colors
         this.squares = [];
